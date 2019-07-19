@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>skywalking-start</artifactId>
+        <groupId>com.purge.skywalking</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dubbo-example</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-cloud-alibaba-dubbo-client-sample</module>
+        <module>spring-cloud-dubbo-sample-api</module>
+        <module>spring-cloud-dubbo-server-sample</module>
+    </modules>
+
+    <properties>
+        <dubbo.api.version>0.0.1-SNAPSHOT</dubbo.api.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- 二方包 -->
+            <dependency>
+                <groupId>com.purge.skywalking</groupId>
+                <artifactId>spring-cloud-dubbo-sample-api</artifactId>
+                <version>${dubbo.api.version}</version>
+            </dependency>
+
+            <!-- 三方包 -->
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>2.7.2</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

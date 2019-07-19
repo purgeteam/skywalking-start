@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-cloud-alibaba-dubbo-client
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.1.1.99:8848
+
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: spring-cloud-alibaba-dubbo-server
+  # 解决 java.net.BindException: Address already in use
+#  application:
+#    qos-port: 33333
+#    qos-enable: false
+#    qos-accept-foreign-ip: false
