@@ -22,7 +22,7 @@ metadata:
   labels:
     app: oap
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: oap
@@ -46,6 +46,8 @@ spec:
           limits:
             memory: 2Gi
         env:
+        - name: TZ
+          value: Asia/Shanghai
         - name: JAVA_OPTS
           value: -Xms256M -Xmx512M
         - name: SKYWALKING_COLLECTOR_UID
