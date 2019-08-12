@@ -70,15 +70,15 @@ storage:
 #    password: ${SW_ES_PASSWORD:""}
 #    indexShardsNumber: ${SW_STORAGE_ES_INDEX_SHARDS_NUMBER:2}
 #    indexReplicasNumber: ${SW_STORAGE_ES_INDEX_REPLICAS_NUMBER:0}
-#    # Those data TTL settings will override the same settings in core module.
-#    recordDataTTL: ${SW_STORAGE_ES_RECORD_DATA_TTL:7} # Unit is day
-#    otherMetricsDataTTL: ${SW_STORAGE_ES_OTHER_METRIC_DATA_TTL:45} # Unit is day
-#    monthMetricsDataTTL: ${SW_STORAGE_ES_MONTH_METRIC_DATA_TTL:18} # Unit is month
-#    # Batch process setting, refer to https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.5/java-docs-bulk-processor.html
-#    bulkActions: ${SW_STORAGE_ES_BULK_ACTIONS:2000} # Execute the bulk every 2000 requests
-#    bulkSize: ${SW_STORAGE_ES_BULK_SIZE:20} # flush the bulk every 20mb
-#    flushInterval: ${SW_STORAGE_ES_FLUSH_INTERVAL:10} # flush the bulk every 10 seconds whatever the number of requests
-#    concurrentRequests: ${SW_STORAGE_ES_CONCURRENT_REQUESTS:2} # the number of concurrent requests
+#    # 这些数据TTL设置将覆盖核心模块中的相同设置。
+#    recordDataTTL: ${SW_STORAGE_ES_RECORD_DATA_TTL:7} # 单位是天
+#    otherMetricsDataTTL: ${SW_STORAGE_ES_OTHER_METRIC_DATA_TTL:45} # 单位是天
+#    monthMetricsDataTTL: ${SW_STORAGE_ES_MONTH_METRIC_DATA_TTL:18} # 单位是月
+#    # 批次工艺设置，参考 https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.5/java-docs-bulk-processor.html
+#    bulkActions: ${SW_STORAGE_ES_BULK_ACTIONS:2000} # 每2000个请求执行一次批量
+#    bulkSize: ${SW_STORAGE_ES_BULK_SIZE:20} # 每20mb刷新一次内存块
+#    flushInterval: ${SW_STORAGE_ES_FLUSH_INTERVAL:10} # 无论请求的数量如何，每10秒刷新一次堆
+#    concurrentRequests: ${SW_STORAGE_ES_CONCURRENT_REQUESTS:2} # 并发请求的数量
 #    metadataQueryMaxSize: ${SW_STORAGE_ES_QUERY_MAX_SIZE:5000}
 #    segmentQueryMaxSize: ${SW_STORAGE_ES_QUERY_SEGMENT_SIZE:200}
   h2:

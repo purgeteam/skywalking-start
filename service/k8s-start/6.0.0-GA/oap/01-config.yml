@@ -45,7 +45,7 @@ data:
         monthMetricsDataTTL: 18 # Unit is month
     storage:
       elasticsearch:
-        clusterNodes: 10.1.1.99:9200
+        clusterNodes: 10.16.33.231:9200
         indexShardsNumber: 2
         indexReplicasNumber: 0
         bulkActions: 2000 # Execute the bulk every 2000 requests

@@ -49,9 +49,8 @@ spec:
         - name: TZ
           value: Asia/Shanghai
         - name: JAVA_OPTS
-          value: -Xms256M -Xmx512M
-
-        #
+          value: -Xms1G -Xmx1G
+        # uidEnvName
         - name: SKYWALKING_COLLECTOR_UID
           valueFrom:
             fieldRef:
