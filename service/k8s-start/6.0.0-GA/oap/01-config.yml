@@ -46,6 +46,8 @@ data:
     storage:
       elasticsearch:
         clusterNodes: 10.16.33.231:9200
+        # elasticsearch 存储前缀 在k8s环境变量加
+        nameSpace: ${SW_NAMESPACE}
         indexShardsNumber: 2
         indexReplicasNumber: 0
         bulkActions: 2000 # Execute the bulk every 2000 requests
