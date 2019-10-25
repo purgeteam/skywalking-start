@@ -45,7 +45,7 @@ data:
         monthMetricsDataTTL: 18 # Unit is month
     storage:
       elasticsearch:
-        clusterNodes: 10.16.33.231:9200
+        clusterNodes: 10.16.35.143:9200
         # elasticsearch 存储前缀 在k8s环境变量加
         nameSpace: ${SW_NAMESPACE}
         indexShardsNumber: 2
