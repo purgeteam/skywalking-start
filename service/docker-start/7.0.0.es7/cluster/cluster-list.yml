@@ -1,0 +1,56 @@
+version: '3.3'
+services:
+  oap:
+    image: apache/skywalking-oap-server:7.0.0-es7
+    container_name: oap
+    restart: always
+    ports:
+      - 11800:11800
+      - 12800:12800
+    environment:
+      TZ: Asia/Shanghai
+      SW_STORAGE: elasticsearch7
+      SW_STORAGE_ES_CLUSTER_NODES: 192.168.24.164:9200
+      SW_NAMESPACE: skywalking7
+
+      # 集群配置
+      SW_CLUSTER: nacos
+      SW_SERVICE_NAME: SkyWalking_OAP_Cluster
+      SW_CLUSTER_NACOS_HOST_PORT: 192.168.24.164:8848
+      SW_CLUSTER_NACOS_NAMESPACE: public
+  oap1:
+    image: apache/skywalking-oap-server:7.0.0-es7
+    container_name: oap1
+    restart: always
+    ports:
+      - 11801:11800
+      - 12801:12800
+    environment:
+      TZ: Asia/Shanghai
+      SW_STORAGE: elasticsearch7
+      SW_STORAGE_ES_CLUSTER_NODES: 192.168.24.164:9200
+      SW_NAMESPACE: skywalking7
+
+      # 集群配置
+      SW_CLUSTER: nacos
+      SW_SERVICE_NAME: SkyWalking_OAP_Cluster
+      SW_CLUSTER_NACOS_HOST_PORT: 192.168.24.164:8848
+      SW_CLUSTER_NACOS_NAMESPACE: public
+  oap2:
+    image: apache/skywalking-oap-server:7.0.0-es7
+    container_name: oap2
+    restart: always
+    ports:
+      - 11802:11800
+      - 12802:12800
+    environment:
+      TZ: Asia/Shanghai
+      SW_STORAGE: elasticsearch7
+      SW_STORAGE_ES_CLUSTER_NODES: 192.168.24.164:9200
+      SW_NAMESPACE: skywalking7
+
+      # 集群配置
+      SW_CLUSTER: nacos
+      SW_SERVICE_NAME: SkyWalking_OAP_Cluster
+      SW_CLUSTER_NACOS_HOST_PORT: 192.168.24.164:8848
+      SW_CLUSTER_NACOS_NAMESPACE: public
