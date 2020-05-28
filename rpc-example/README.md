@@ -21,9 +21,13 @@ order
 ### user op 参数
 ```text
 -javaagent:/Volumes/CodeFile/GitHub/purgeteam/skywalking-start/service/apache-skywalking-apm-bin/agent/skywalking-agent.jar -Dskywalking.agent.service_name=UserService
+
+-javaagent:/Volumes/CodeFile/GitHub/purgeteam/skywalking-start/service/apache-skywalking-apm/7.0.0.es7/apache-skywalking-apm-bin-es7/agent/skywalking-agent.jar -Dskywalking.agent.service_name=UserService
 ```
 
 ### user op 参数
 ```text
 -javaagent:/Volumes/CodeFile/GitHub/purgeteam/skywalking-start/service/apache-skywalking-apm-bin/agent/skywalking-agent.jar -Dskywalking.agent.service_name=OrderService
+
+-javaagent:/Volumes/CodeFile/GitHub/purgeteam/skywalking-start/service/apache-skywalking-apm/7.0.0.es7/apache-skywalking-apm-bin-es7/agent/skywalking-agent.jar -Dskywalking.agent.service_name=OrderService
 ```
