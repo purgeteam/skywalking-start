@@ -1,20 +1,27 @@
 version: '3.3'
 services:
-  oap:
+  oap1:
     image: apache/skywalking-oap-server:7.0.0-es7
-    container_name: oap
+    container_name: oap1
     restart: always
     ports:
       - 11801:11800
       - 12801:12800
+    volumes:
+      - ./elastic-certificates.p12:/home/elastic-certificates.p12
     environment:
       TZ: Asia/Shanghai
       SW_STORAGE: elasticsearch7
-      SW_STORAGE_ES_CLUSTER_NODES: 192.168.24.164:9200
+      SW_STORAGE_ES_CLUSTER_NODES: 10.16.33.69:9200,10.16.32.247:9200,10.16.33.217:9200
+      #      SW_ES_USER: skywalking
+      #      SW_ES_PASSWORD: Sky2020
+      SW_ES_USER: elastic
+      SW_ES_PASSWORD: u6y3LNE5cvsbllAZWjUL
+      SW_SW_STORAGE_ES_SSL_JKS_PATH: /home/elastic-certificates.p12
       SW_NAMESPACE: skywalking7
 
       # 集群配置
       SW_CLUSTER: nacos
       SW_SERVICE_NAME: SkyWalking_OAP_Cluster
-      SW_CLUSTER_NACOS_HOST_PORT: 192.168.24.164:8848
+      SW_CLUSTER_NACOS_HOST_PORT: 10.16.35.74:10000
       SW_CLUSTER_NACOS_NAMESPACE: public
